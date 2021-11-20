@@ -1,4 +1,5 @@
 import React,{ useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from "./home.module.css";
 import MovieData from '../public/MovieData';
 import { MdDelete } from "react-icons/md";
@@ -27,6 +28,7 @@ function Home() {
                 <div className = {styles.content}>
                     {
                         MovieData && MovieData.length>0 && MovieData.map((item)=> {
+                          const id = item.id
                         return (
                             <div key = {item.id} className = {styles.movieItem}>
                                 <div className = {styles.movieImg}>
@@ -34,7 +36,7 @@ function Home() {
                                 </div>
                                 <h3 className = {styles.movieTitle}>{item.nama}</h3>
                                 <p className = {styles.movieDesc}>{item.desc.slice(0,60)}..</p>
-                                <i>See details</i>
+                                <Link to={{pathname: `/${id}`}} className={styles.link}>See Details</Link>
                                 <button onClick={() => handleClick(item)} className = {styles.btn}>Add to wishlist</button>
                             </div>
                         )})

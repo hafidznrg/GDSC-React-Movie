@@ -19,7 +19,8 @@ const MovieData =
                 "desc" : "After apparent death, Siena is able to see signs that people will die. However, her friends did not believe in her abilities. Then, the sign appeared on her and those closest to her.",
                 "genre" : "Horror",
                 "rating" : 5.4,
-                "duration" : 92
+                "duration" : 92,
+                "director" : "Hadrah Daeng Ratu"
             },
             {     
                 "id" : 3,
